@@ -9,7 +9,7 @@
     <!-- Шапка -->
     <header>
         <div class="logo_div">
-            <img src="static/img/logo.png" class="logo_img">
+            <a><img src="static/img/logo.png" class="logo_img"></a>
         </div>
         <div class="main_menu">
             <a class="menu_url">Цветы</a>
@@ -31,11 +31,35 @@
     <!-- Контент -->
     <main>
         <!-- Фильтер -->
-        <div class="filter"></div>
+        <div class="filter-container">
+            <div class="filter"></div>
+        </div>
+
 
         <!-- Карточки -->
         <div class="main_content">
-            <div class="content_item"></div>
+            <div class="content_item">
+                <div class="item_img_div">
+                    <div class="mySlides fade">
+                        <img src="static/img/palma-02.jpg" class="img_item">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="static/img/palma-01.jpg" class="img_item">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <script src="static/js/scripts.js"></script>
+                </div>
+                <div class="item_description_div">
+                    <div class="title_price_item">
+                        <p class="title_item">Пальма</p>
+                        <p class="price_item">3999 руб.</p>
+                    </div>
+                    <div class="button_div">
+                        <button class="button_item"> + </button>
+                    </div>
+                </div>
+            </div>
             <div class="content_item"></div>
             <div class="content_item"></div>
             <div class="content_item"></div>
