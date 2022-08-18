@@ -111,23 +111,7 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.filter {
-    background-color: #ffdbdb;
-    position: sticky;
-    top: 4rem;
-    width: 25vw;
-    height: 350px;
-    margin: 30px 0 0 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
 
-.filter-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  height: 100%;
-  width: 400px;
-}
 
 /* элемент */
 .item_img_div {
@@ -207,3 +191,186 @@ footer {
     width: 5vw;
 }
 
+/* Фильтер */
+.filter {
+    background-color: #ffdbdb;
+    position: sticky;
+    top: 4rem;
+    width: 25vw;
+    min-height: 30vw;
+    max-height: 40vw;
+    margin: 30px 0 0 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 100%;
+  width: 400px;
+}
+
+.filter_title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3vw;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+.filter_p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8vw;
+    margin-left: 1vw;
+    margin-bottom: 0;
+}
+
+.filter_button {
+    display: block;
+    align-items: flex-end;
+    background-color: #ffdbdb;
+    width: 100%;
+    height: 3vw;
+    text-align: center;
+}
+.filter_button_item {
+    width: 100%;
+    height: 100%;
+    background-color: #e5b6b6;
+    border: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 2px;
+    font-size: 2vw;
+    transition: opacity 0.15s, height 0.1s;
+}
+
+.filter_button_item:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+.filter_button_item:active {
+    opacity: 80%;
+}
+
+.polzunok-input-5-left, .polzunok-input-5-right {
+    display: inline-block;
+    width: 5vw;
+    background-color: #ffdbdb;
+    border: none;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.polzunok-container-5 * {
+    box-sizing: border-box;
+    outline: none;
+}
+.polzunok-container-5 {
+    padding: 10px 16px;
+    margin: 1vw;
+}
+.polzunok-container-5:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.polzunok-container-5 .ui-slider {
+    position: relative;
+    background: white;
+    height: 10px;
+    border-radius:10px;
+}
+.polzunok-container-5 .ui-slider .ui-slider-handle {
+    position: absolute;
+    margin-left: -16px;
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 4px solid black;
+    top: -0.9vw;
+    background: white;
+    transition: transform 0.2s, border 0.4s, background-color 0.15s;
+}
+.polzunok-container-5 .ui-slider .ui-slider-handle:hover,
+.polzunok-container-5 .ui-slider .ui-slider-handle:focus {
+    transform: scale(1.2);
+
+}
+
+.polzunok-input-5-left {
+    float: left;
+}
+.polzunok-input-5-right {
+    float: right;
+}
+.polzunok-container-5 .ui-slider .ui-slider-range {
+    position: absolute;
+    height: 1vw;
+    border: 0;
+    background: whitesmoke;
+    border-radius:10px;
+}
+
+.filter_label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5vw;
+    margin-left: 3vw;
+    margin-top: 0.4vw;
+}
+
+
+.filter_checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.filter_checkbox+label {
+  display: block;
+  align-items: center;
+  user-select: none;
+}
+.filter_checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid black;
+  border-radius: 1em;
+  margin-right: 0.5em;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.filter_checkbox:checked+label::before {
+  border-color: black;
+  background-color: #ffaa65;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили при наведении курсора на checkbox */
+.filter_checkbox:not(:disabled):not(:checked)+label:hover::before {
+  border-color: #909090;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.filter_checkbox:not(:disabled):active+label::before {
+  background-color: #d2d2d2;
+  border-color: #909090;
+}
+
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.filter_checkbox:disabled+label::before {
+  background-color: #e9ecef;
+}

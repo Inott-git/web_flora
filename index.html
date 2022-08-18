@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Wendu</title>
+    <link rel="icon" href="static/img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
     <!-- Шапка -->
@@ -32,8 +36,40 @@
     <main>
         <!-- Фильтер -->
         <div class="filter-container">
-            <div class="filter"></div>
+            <div class="filter">
+                <div class="filter_title">ФИЛЬТРЫ</div>
+                <p class="filter_p"> Цена: </p>
+                <div class="polzunok-container-5">
+                    <div class="polzunok-5"></div>
+                    <input type="text" class="polzunok-input-5-left" />
+                    <input type="text" class="polzunok-input-5-right "/>
+                </div>
+                <script src="static/js/slider.js"></script>
+                <p class="filter_p"> Сезон цветения: </p>
+                <form>
+
+                    <input id='winter' type="checkbox" class="filter_checkbox" name="sezon">
+                    <label for='winter'class="filter_label">Зима</label>
+
+                    <input id='spring' type="checkbox" class="filter_checkbox" name="sezon">
+                    <label for='spring'class="filter_label">Весна</label>
+
+                    <input id='summer' type="checkbox" class="filter_checkbox" name="sezon">
+                    <label for='summer'class="filter_label">Лето</label>
+
+                    <input id='autumn' type="checkbox" class="filter_checkbox" name="sezon">
+                    <label for='autumn'class="filter_label">Осень</label>
+
+                    <input id='year' type="checkbox" class="filter_checkbox" name="sezon">
+                    <label for='year'class="filter_label">Круглый год</label>
+                </form>
+                <div class="filter_button">
+                    <button class="filter_button_item">ПРИНЯТЬ</button>
+                </div>
+            </div>
+
         </div>
+
 
 
         <!-- Карточки -->
